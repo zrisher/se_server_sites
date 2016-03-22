@@ -17,3 +17,10 @@
 //= require zanobo_rails/navbar_static_bottom
 //= require zanobo_rails/navbar_active_links
 //= require_tree .
+
+auto_close_alerts = ->
+    $(".alert").fadeTo(2000, 1000).slideUp 1000, ->
+    $(".alert").alert('close')
+
+$(document).on 'page:change', ->
+    auto_close_alerts()
