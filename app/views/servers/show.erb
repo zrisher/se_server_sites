@@ -1,0 +1,41 @@
+<%
+   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+%>
+
+
+<h1><%= @server.name %></h1>
+
+<ul>
+  <li><%= link_to 'Steam Group', @server.steam_group_url %></li>
+  <li><%= link_to 'Join via Steam',
+                  "steam://connect/#{@server.domain}:#{@server.port}" %></li>
+  <li><%= link_to 'Talk with us on Mumble',
+                  "mumble://#{@server.mumble_domain}:#{@server.mumble_port}/#{@server.mumble_channel}" %></li>
+</ul>
+
+<div>
+  <%= markdown.render(@server.description).html_safe %>
+</div>
+
+<div>
+  <h2>Rules</h2>
+  <%= markdown.render(@server.rules).html_safe %>
+</div>
+
+<div>
+  <h2>Settings</h2>
+  <%= markdown.render(@server.settings).html_safe %>
+</div>
+
+<ul>
+  <h2>Mods</h2>
+  <% @server.mods.each do |mod| %>
+    <li>
+      <%= link_to mod.steam_name, mod.steam_url %>
+      <%= image_tag mod.steam_image_url, style: 'width:320px; height:180px' %>
+    </li>
+  <% end %>
+</ul>
+
+
+

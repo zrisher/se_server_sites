@@ -1,0 +1,79 @@
+<%
+   if user_signed_in?
+     current_root = authenticated_root_path
+   else
+     current_root = root_path
+   end
+%>
+
+<% cache @clan, user_signed_in? do %>
+
+  <header role="banner">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#top-nav-group" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <%= link_to current_root, class: "navbar-brand" do %>
+            <% if @clan %>
+              <%= image_tag @clan.navbar_logo_url %>
+            <% else %>
+              Home
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="collapse navbar-collapse" id="top-nav-group">
+          <ul class="nav navbar-nav">
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to "Map", '' %>
+              </li>
+              <li>
+                <%= link_to "Industry", '' %>
+              </li>
+              <li>
+                <%= link_to "Inventory", '' %>
+              </li>
+              <li>
+                <%= link_to "Intelligence", '' %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to "About", '' %>
+              </li>
+              <li>
+                <%= link_to "Servers", servers_path %>
+              </li>
+              <li>
+                <%= link_to "News", '' %>
+              </li>
+            <% end %>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to('Login', new_user_session_path) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+<% end %>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= application_meta_tags %>
+  <%# favicon_tags(@clan.icon_url) if @clan %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body role="document" id="clan-site">
+
+<%= render 'header_nav' %>
+
+<%= render 'notice_bar' %>
+
+<%= yield %>
+
+<%= render 'footer_nav' %>
+
+<%# javascript_include_tag "last", "data-turbolinks-track" => true %>
+
+</body>
+</html>

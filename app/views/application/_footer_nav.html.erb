@@ -1,0 +1,16 @@
+<% cache @clan do %>
+
+  <footer role="contentinfo">
+
+    <nav class="navbar navbar-default navbar-static-bottom">
+
+      <nav class="navbar-text text-center nav-justified" >
+        &copy; <%= Date.today.strftime("%Y") %> <%= @clan.name if @clan %>
+      </nav>
+
+    </nav>
+    <div class="navbar-static-bottom-spacer"></div>
+
+  </footer>
+
+<% end %>
