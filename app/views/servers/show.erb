@@ -1,8 +1,3 @@
-<%
-   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-%>
-
-
 <h1><%= @server.name %></h1>
 
 <ul>
@@ -14,28 +9,8 @@
 </ul>
 
 <div>
-  <%= markdown.render(@server.description).html_safe %>
+  <%= render_markdown @server.description %>
 </div>
-
-<div>
-  <h2>Rules</h2>
-  <%= markdown.render(@server.rules).html_safe %>
-</div>
-
-<div>
-  <h2>Settings</h2>
-  <%= markdown.render(@server.settings).html_safe %>
-</div>
-
-<ul>
-  <h2>Mods</h2>
-  <% @server.mods.each do |mod| %>
-    <li>
-      <%= link_to mod.steam_name, mod.steam_url %>
-      <%= image_tag mod.steam_image_url, style: 'width:320px; height:180px' %>
-    </li>
-  <% end %>
-</ul>
 
 
 

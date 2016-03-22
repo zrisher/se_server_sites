@@ -1,0 +1,17 @@
+/*
+
+$navbar-height: 65px;
+$navbar-border-height: 1px;
+$navbar-total-height: #{$navbar-height + $navbar-border-height};
+
+$footer-height: 45px;
+$footer-border-height: 1px;
+$footer-total-height: #{$footer-height + $footer-border-height};
+
+$empty-page-height: calc(100% - 112px); // #{$navbar-total-height + $footer-total-height}
+
+//$screen-xs-max: $screen-sm-min -1;
+//$screen-xs-min: 320px;
+$screen-ty-max: $screen-xs-min - 1;
+
+*/

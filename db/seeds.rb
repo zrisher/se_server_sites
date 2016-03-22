@@ -60,7 +60,13 @@ Asteroids are concentrated at the CPs (marked via GPS on your HUD) as well as in
 * Permanent Death OFF
 * Environment Hostility SAFE"
 
-
+gos_roadmap =
+'Our plan is:
+  * do stuff
+  * do more stuff
+  * do even more stuff
+  * profit
+'
 gos = Server.create!(
   name: 'Gardens of Sajuuk',
   domain: '158.69.127.175',
@@ -69,6 +75,7 @@ gos = Server.create!(
   description: gos_description,
   rules: gos_rules,
   settings: gos_settings,
+  roadmap: gos_roadmap,
   mumble_domain: 'urxp.typefrag.com',
   mumble_port: 8220,
   mumble_channel: 'Space Engineers'

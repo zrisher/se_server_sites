@@ -1,17 +1,22 @@
-/*
 @import "variables/colors";
-@import "variables/fonts";
-@import "variables/sizes";
-//@import "variables/bootstrap";
-*/
+//@import "variables/fonts";
 @import 'zanobo_rails';
-/*
-@import "partials/carousel";
-@import "partials/images";
-*/
+//@import "variables/sizes";
 @import "partials/nav";
-/*
-@import "partials/pages";
-@import "partials/films";
-@import "partials/news";
-*/
+
+
+html {
+  background: image-url('sajuuk_bg_1920x1080.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-color: transparent;
+}
+
+main.container {
+  background-color: rgba(255,255,255,0.8);
+}

@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160321134709) do
     t.text     "description"
     t.text     "rules"
     t.text     "settings"
+    t.text     "roadmap"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

@@ -33,30 +33,24 @@
 
         <div class="collapse navbar-collapse" id="top-nav-group">
           <ul class="nav navbar-nav">
-            <% if user_signed_in? %>
+            <%# if user_signed_in? %>
+            <%# else %>
               <li>
-                <%= link_to "Map", '' %>
+                <%= link_to 'Rules', rules_path %>
               </li>
               <li>
-                <%= link_to "Industry", '' %>
+                <%= link_to 'Settings', settings_path %>
               </li>
               <li>
-                <%= link_to "Inventory", '' %>
+                <%= link_to 'Mods', mods_path %>
               </li>
               <li>
-                <%= link_to "Intelligence", '' %>
-              </li>
-            <% else %>
-              <li>
-                <%= link_to "About", '' %>
+                <%= link_to 'Roadmap', roadmap_path %>
               </li>
               <li>
-                <%= link_to "Servers", servers_path %>
+                <%= link_to 'Map', map_path %>
               </li>
-              <li>
-                <%= link_to "News", '' %>
-              </li>
-            <% end %>
+            <%# end %>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

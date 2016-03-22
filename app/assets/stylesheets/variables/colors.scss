@@ -1,0 +1,52 @@
+$black: #000;
+$white: #fff;
+
+$brand-dark-orange: rgb(175,83,42);
+$brand-dark-red: rgb(107,37,37);
+$brand-dark-magenta: rgb(78,26,49);
+$brand-dark-purple: rgb(82,52,90);
+$brand-dark-blue: rgb(13,15,53);
+$brand-darker-blue: rgb(0,5,34);
+
+/*
+$brand-primary: $brand-san-marino;
+$brand-black: $brand-dark-jungle;
+
+$text-color: $brand-black;
+$text-inverse-color: $white;
+
+$link-color: $brand-primary;
+//$link-hover-color: darken($link-color, 15%) !default;
+$link-inverse-color: $brand-baked;
+$link-inverse-hover-color: lighten($link-color, 15%);
+
+$gutter-color: darken($brand-desert, 2%);
+//$gutter-color: lighten($brand-baked, 29%);
+
+*/
+
+// == Nav
+// bg
+$navbar-default-bg: $brand-dark-purple; //$brand-loblolly;
+//$navbar-default-link-active-bg: darken($navbar-default-bg, 6.5%) !default;
+//$navbar-default-link-disabled-bg:          transparent !default;
+//$navbar-default-brand-hover-bg: transparent !default;
+$navbar-default-link-hover-bg: darken($navbar-default-bg, 6.5%);
+$navbar-default-toggle-hover-bg: $brand-dark-magenta; //$brand-polo-blue;
+//$navbar-default-toggle-icon-bar-bg:        #888 !default;
+
+// border
+$navbar-default-border: $brand-dark-blue;
+$navbar-default-toggle-border-color: $brand-dark-blue;
+
+// text
+$navbar-text-color: $white;
+$navbar-default-color: $navbar-text-color;
+$navbar-default-brand-color: $navbar-text-color;
+$navbar-default-brand-hover-color: $brand-dark-orange; //darken($navbar-default-brand-color, 10%) !default;
+
+// links
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: darken($navbar-text-color, 6.5%);
+$navbar-default-link-active-color: $navbar-default-link-hover-color;
+//$navbar-default-link-disabled-color:       #ccc !default;

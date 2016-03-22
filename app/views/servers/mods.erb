@@ -1,0 +1,9 @@
+<ul>
+  <h2>Mods</h2>
+  <% @server.mods.each do |mod| %>
+    <li>
+      <%= link_to mod.steam_name, mod.steam_url %>
+      <%= image_tag mod.steam_image_url, style: 'width:320px; height:180px' %>
+    </li>
+  <% end %>
+</ul>

@@ -11,6 +11,7 @@ class CreateServers < ActiveRecord::Migration
       t.text :description
       t.text :rules
       t.text :settings
+      t.text :roadmap
 
       t.timestamps null: false
     end

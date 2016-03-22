@@ -30,7 +30,13 @@ Rails.application.routes.draw do
 
   resources :servers, only: [:show, :index]
 
-  root to: 'pages#home'
+  root to: 'servers#show', id: '1'
+
+  get 'settings', to: 'servers#settings', id: '1'
+  get 'rules', to: 'servers#rules', id: '1'
+  get 'mods', to: 'servers#mods', id: '1'
+  get 'roadmap', to: 'servers#roadmap', id: '1'
+  get 'map', to: 'servers#map', id: '1'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
